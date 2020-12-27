@@ -1,0 +1,1145 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ontology.group10travel.com#"
+     xml:base="http://ontology.group10travel.com"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://ontology.group10travel.com">
+        <rdfs:label>traveling system to search for flights based on different criteria: direct/non-direct, arrival date, departure date..etc</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#datetime -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#datetime"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#dobule -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#dobule"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Duration -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2006/time#Duration"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://ontology.group10travel.com#arrivesIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#arrivesIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#DirectFlight"/>
+        <rdfs:range rdf:resource="http://schema.org/Airport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#belongsToCabinClass -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#belongsToCabinClass">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#FlightPackage"/>
+        <rdfs:range rdf:resource="http://ontology.group10travel.com#CabinClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#belongsToPackage -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#belongsToPackage">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#Ticket"/>
+        <rdfs:range rdf:resource="http://ontology.group10travel.com#FlightPackage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#books -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#books">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#User"/>
+        <rdfs:range rdf:resource="http://ontology.group10travel.com#Trip"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#departsFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#departsFrom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#DirectFlight"/>
+        <rdfs:range rdf:resource="http://schema.org/Airport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#hasAddress -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#hasAddress">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#hasCabinClass -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#hasCabinClass">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://schema.org/Airline"/>
+        <rdfs:range rdf:resource="http://ontology.group10travel.com#CabinClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#hasContact -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#hasContact">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#Entity"/>
+        <rdfs:range rdf:resource="http://schema.org/ContactPoint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#hasPhone -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#hasPhone">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#hasTicket -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#hasTicket">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#Flight"/>
+        <rdfs:range rdf:resource="http://ontology.group10travel.com#Ticket"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#inCity -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#inCity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://schema.org/Airport"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/City"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#includeSubFlight -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#includeSubFlight">
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#NonDirectFlight"/>
+        <rdfs:range rdf:resource="http://ontology.group10travel.com#DirectFlight"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#includeTicket -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#includeTicket">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#Trip"/>
+        <rdfs:range rdf:resource="http://ontology.group10travel.com#Ticket"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#includesAirlineService -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#includesAirlineService">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#FlightPackage"/>
+        <rdfs:range rdf:resource="http://ontology.group10travel.com#AirlineService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#includesBaggagePolicy -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#includesBaggagePolicy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#FlightPackage"/>
+        <rdfs:range rdf:resource="http://ontology.group10travel.com#BaggagePolicy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#includesCancellationPolicy -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#includesCancellationPolicy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#FlightPackage"/>
+        <rdfs:range rdf:resource="http://ontology.group10travel.com#CancellationPolicy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#includesStopping -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#includesStopping">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#NonDirectFlight"/>
+        <rdfs:range rdf:resource="http://ontology.group10travel.com#Stopping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#introduceAirlineService -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#introduceAirlineService">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://schema.org/Airline"/>
+        <rdfs:range rdf:resource="http://ontology.group10travel.com#AirlineService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#introduceBaggagePolicy -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#introduceBaggagePolicy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://schema.org/Airline"/>
+        <rdfs:range rdf:resource="http://ontology.group10travel.com#BaggagePolicy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#introduceCancellationPolicy -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#introduceCancellationPolicy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://schema.org/Airline"/>
+        <rdfs:range rdf:resource="http://ontology.group10travel.com#CancellationPolicy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#organizeFlight -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#organizeFlight">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://schema.org/Airline"/>
+        <rdfs:range rdf:resource="http://ontology.group10travel.com#Flight"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#stopsAt -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontology.group10travel.com#stopsAt">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#Stopping"/>
+        <rdfs:range rdf:resource="http://schema.org/Airport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://ontology.group10travel.com#airlineName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#airlineName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>airline name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#bookingDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#bookingDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#Trip"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>booking date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#bookingId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#bookingId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#Trip"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#cabinBagDimensionCm -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#cabinBagDimensionCm">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#BaggagePolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>cabin bag cm</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#cabinBagWeightKg -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#cabinBagWeightKg">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#BaggagePolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>cabin bags kg</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#cabinBagsNo -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#cabinBagsNo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#BaggagePolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>cabin bags</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#checkedBagDimensionCm -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#checkedBagDimensionCm">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#BaggagePolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>checked bags cm</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#checkedBagWeightKg -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#checkedBagWeightKg">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#BaggagePolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>checked bags kg</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#checkedBagsNo -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#checkedBagsNo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#BaggagePolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>checked bags</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#chosenMealServicePrice -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#chosenMealServicePrice">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#Ticket"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>chosen meal price</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#chosenWifiServicePrice -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#chosenWifiServicePrice">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#Ticket"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>chosen wifi price</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#dateOfBirth -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#dateOfBirth">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#description">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#durationFrom -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#durationFrom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>duration from</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#durationMin -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#durationMin">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>duration min</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#durationTo -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#durationTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>duration to</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#email -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#email">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#excessivePricePerKg -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#excessivePricePerKg">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#BaggagePolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>excessive price per kg</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#firstName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#firstName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>first name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#flightArrivalDateTime -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#flightArrivalDateTime">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>arrival date time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#flightDepartureDateTime -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#flightDepartureDateTime">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>departure date time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#flightDistanceKm -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#flightDistanceKm">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>traveled distance</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#flightNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#flightNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>flight Number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#flightType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#flightType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#iataCode -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#iataCode">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>IATA code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#icaoCode -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#icaoCode">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>ICAO code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#isAvailable -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#isAvailable">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#isoCode -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#isoCode">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#lastName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#lastName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>last name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#passportNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#passportNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#policyDueDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#policyDueDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#CancellationPolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>policy due</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#policyFlightType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#policyFlightType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#BaggagePolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>flight type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#postalCode -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#postalCode">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#price -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#price">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#refundPostDuePercentage -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#refundPostDuePercentage">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#CancellationPolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>refund percentage post</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#refundPreDuePercentage -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#refundPreDuePercentage">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#CancellationPolicy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>refund percentage pre</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#requestedExessiveBaggaeKG -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#requestedExessiveBaggaeKG">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#Ticket"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>requested excessive kg</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#seatNumberr -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#seatNumberr">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#specialMealType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#specialMealType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#SpecialmealService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>meal type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#title -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#title">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#tripTax -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#tripTax">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#Trip"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.group10travel.com#wifiOnBoardBandWidthMbps -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontology.group10travel.com#wifiOnBoardBandWidthMbps">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontology.group10travel.com#WifionBoardService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>wifi width mbps</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/City -->
+
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/City"/>
+    
+
+
+    <!-- http://ontology.group10travel.com#AirlineService -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#AirlineService"/>
+    
+
+
+    <!-- http://ontology.group10travel.com#BaggagePolicy -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#BaggagePolicy"/>
+    
+
+
+    <!-- http://ontology.group10travel.com#BusinessClass -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#BusinessClass">
+        <rdfs:subClassOf rdf:resource="http://ontology.group10travel.com#CabinClass"/>
+        <owl:disjointWith rdf:resource="http://ontology.group10travel.com#EconomyClass"/>
+        <owl:disjointWith rdf:resource="http://ontology.group10travel.com#FirstClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.group10travel.com#CabinClass -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#CabinClass"/>
+    
+
+
+    <!-- http://ontology.group10travel.com#CancellationPolicy -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#CancellationPolicy"/>
+    
+
+
+    <!-- http://ontology.group10travel.com#DirectFlight -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#DirectFlight">
+        <rdfs:subClassOf rdf:resource="http://ontology.group10travel.com#Flight"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.group10travel.com#arrivesIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://schema.org/Airport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.group10travel.com#departsFrom"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://schema.org/Airport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://ontology.group10travel.com#NonDirectFlight"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.group10travel.com#EconomyClass -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#EconomyClass">
+        <rdfs:subClassOf rdf:resource="http://ontology.group10travel.com#CabinClass"/>
+        <owl:disjointWith rdf:resource="http://ontology.group10travel.com#FirstClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.group10travel.com#Entity -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#Entity"/>
+    
+
+
+    <!-- http://ontology.group10travel.com#FirstClass -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#FirstClass">
+        <rdfs:subClassOf rdf:resource="http://ontology.group10travel.com#CabinClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.group10travel.com#FlexibleCancellation -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#FlexibleCancellation">
+        <rdfs:subClassOf rdf:resource="http://ontology.group10travel.com#CancellationPolicy"/>
+        <owl:disjointWith rdf:resource="http://ontology.group10travel.com#StrictCancellation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.group10travel.com#Flight -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#Flight">
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontology.group10travel.com#flightDepartureDateTime"/>
+        </owl:hasKey>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontology.group10travel.com#flightNumber"/>
+        </owl:hasKey>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.group10travel.com#FlightPackage -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#FlightPackage"/>
+    
+
+
+    <!-- http://ontology.group10travel.com#MultiCityTrip -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#MultiCityTrip">
+        <rdfs:subClassOf rdf:resource="http://ontology.group10travel.com#Trip"/>
+        <owl:disjointWith rdf:resource="http://ontology.group10travel.com#OneWayTrip"/>
+        <owl:disjointWith rdf:resource="http://ontology.group10travel.com#RoundTrip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.group10travel.com#NonDirectFlight -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#NonDirectFlight">
+        <rdfs:subClassOf rdf:resource="http://ontology.group10travel.com#Flight"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.group10travel.com#includeSubFlight"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.group10travel.com#DirectFlight"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.group10travel.com#includesStopping"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.group10travel.com#Stopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.group10travel.com#OneWayTrip -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#OneWayTrip">
+        <rdfs:subClassOf rdf:resource="http://ontology.group10travel.com#Trip"/>
+        <owl:disjointWith rdf:resource="http://ontology.group10travel.com#RoundTrip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.group10travel.com#RoundTrip -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#RoundTrip">
+        <rdfs:subClassOf rdf:resource="http://ontology.group10travel.com#Trip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.group10travel.com#SeatSelectionService -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#SeatSelectionService">
+        <rdfs:subClassOf rdf:resource="http://ontology.group10travel.com#AirlineService"/>
+        <owl:disjointWith rdf:resource="http://ontology.group10travel.com#SpecialmealService"/>
+        <owl:disjointWith rdf:resource="http://ontology.group10travel.com#WifionBoardService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.group10travel.com#SpecialmealService -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#SpecialmealService">
+        <rdfs:subClassOf rdf:resource="http://ontology.group10travel.com#AirlineService"/>
+        <owl:disjointWith rdf:resource="http://ontology.group10travel.com#WifionBoardService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.group10travel.com#Stopping -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#Stopping">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.group10travel.com#stopsAt"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://schema.org/Airport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.group10travel.com#StrictCancellation -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#StrictCancellation">
+        <rdfs:subClassOf rdf:resource="http://ontology.group10travel.com#CancellationPolicy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.group10travel.com#Ticket -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#Ticket"/>
+    
+
+
+    <!-- http://ontology.group10travel.com#Trip -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#Trip">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.group10travel.com#bookingId"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.group10travel.com#User -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#User">
+        <rdfs:subClassOf rdf:resource="http://ontology.group10travel.com#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.group10travel.com#WifionBoardService -->
+
+
+    <owl:Class rdf:about="http://ontology.group10travel.com#WifionBoardService">
+        <rdfs:subClassOf rdf:resource="http://ontology.group10travel.com#AirlineService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Airline -->
+
+
+    <owl:Class rdf:about="http://schema.org/Airline">
+        <rdfs:subClassOf rdf:resource="http://ontology.group10travel.com#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.group10travel.com#hasCabinClass"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.group10travel.com#CabinClass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.group10travel.com#introduceBaggagePolicy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.group10travel.com#BaggagePolicy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.group10travel.com#introduceCancellationPolicy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://ontology.group10travel.com#CancellationPolicy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Airport -->
+
+
+    <owl:Class rdf:about="http://schema.org/Airport">
+        <rdfs:subClassOf rdf:resource="http://ontology.group10travel.com#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/ContactPoint -->
+
+
+    <owl:Class rdf:about="http://schema.org/ContactPoint"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
+
+

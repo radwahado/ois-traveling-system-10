@@ -1,0 +1,45 @@
+PREFIX schema: <http://schema.org/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX db: <http://dbpedia.org/>
+prefix group10: <http://ontology.group10travel.com#>
+
+select ?flightNumber ?fromAirportName ?toAirportName ?toCity ?departureTime ?arrivalTime ?cabinClassTitle (COUNT(*) AS ?numberOfTickets) (GROUP_CONCAT(DISTINCT ?price;SEPARATOR=", ") AS ?prices)
+where 
+{
+  # get flights that departs from airlines in brussels
+  ?flight group10:departsFrom ?fromAirport .
+  ?fromAirport group10:inCity dbr:Brussels .
+  
+  # make sure flight is available
+  ?flight group10:isAvailable true .
+
+  # extract cabin class information for available tickets 
+  ?flight group10:hasTicket ?ticket . 
+  ?ticket group10:belongsToPackage ?package .
+  ?package group10:belongsToCabinClass ?cabinClass .
+  
+  # flight number
+  ?flight group10:flightNumber ?flightNumber .
+
+  # departure airport name
+  ?fromAirport schema:name ?fromAirportName .
+  
+  # arrival airport name and city
+  ?flight group10:arrivesIn ?toAirport .
+  ?toAirport schema:name ?toAirportName .
+  ?toAirport group10:inCity ?toCity .
+  
+  # departure and arrival time
+  ?flight group10:flightDepartureDatetime ?departureTime .
+  ?flight group10:flightArrivalDatetime ?arrivalTime .
+  
+  #cabin class title
+  ?cabinClass group10:title ?cabinClassTitle .
+  
+  # ticket price
+  ?ticket group10:price ?price .
+
+}
+GROUP BY ?flightNumber ?fromAirportName ?toAirportName ?toCity ?departureTime ?arrivalTime ?cabinClassTitle
+ORDER BY ?flightNumber ?price
+limit 10

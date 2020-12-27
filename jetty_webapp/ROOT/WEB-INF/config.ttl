@@ -1,0 +1,23 @@
+# Prefix declarations to be used in RDF output
+@prefix conf: <http://richard.cyganiak.de/2007/pubby/config.rdf#> .
+@prefix ont: <http://www.geohive.ie/ontology/osi#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+# Server configuration section
+<> a conf:Configuration;
+	conf:projectName "Traveling Group10";
+	conf:projectHomepage <http://ontology.group10travel.com/>;
+	conf:webBase <http://data.group10travel.com/>;
+	conf:usePrefixesFrom <>;
+	conf:defaultLanguage "en";
+conf:dataset [
+	conf:sparqlEndpoint <http://sparql.group10travel.com>;
+	conf:datasetBase <http://data.group10travel.com#> ;
+	conf:fixUnescapedCharacters "(),!]&*+;=@";
+	conf:resourceDescriptionQuery "DESCRIBE ?__this__";
+];
+.

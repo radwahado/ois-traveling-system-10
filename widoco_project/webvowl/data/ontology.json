@@ -1,0 +1,1858 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://schema.org", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://dbpedia.org/ontology", "http://ontology.group10travel.com", "http://www.w3.org/2006/time" ],
+    "iri" : "http://ontology.group10travel.com",
+    "labels" : {
+      "undefined" : "traveling system to search for flights based on different criteria: direct/non-direct, arrival date, departure date..etc"
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "84",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "106",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "115",
+    "type" : "owl:Class"
+  }, {
+    "id" : "121",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://ontology.group10travel.com#AirlineService",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AirlineService"
+    },
+    "subClasses" : [ "1", "2", "3" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "7",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://ontology.group10travel.com#StrictCancellation",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StrictCancellation"
+    },
+    "id" : "14",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://ontology.group10travel.com#FlexibleCancellation",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FlexibleCancellation"
+    },
+    "id" : "21",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://ontology.group10travel.com#SeatSelectionService",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SeatSelectionService"
+    },
+    "id" : "1",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "48",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "13",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://schema.org/Airport",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Airport"
+    },
+    "attributes" : [ "external" ],
+    "id" : "26",
+    "superClasses" : [ "52" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "53",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "56",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "60",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "61",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "62",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://ontology.group10travel.com#Flight",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Flight"
+    },
+    "subClasses" : [ "25", "65" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://ontology.group10travel.com#Entity",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Entity"
+    },
+    "subClasses" : [ "45", "26", "55" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "67",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "10",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://ontology.group10travel.com#RoundTrip",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RoundTrip"
+    },
+    "id" : "68",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "69",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "59",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "76",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "77",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "79",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://ontology.group10travel.com#BusinessClass",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BusinessClass"
+    },
+    "id" : "80",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "81",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "82",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://ontology.group10travel.com#MultiCityTrip",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MultiCityTrip"
+    },
+    "id" : "84",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "http://schema.org/ContactPoint",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ContactPoint"
+    },
+    "attributes" : [ "external" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://ontology.group10travel.com#OneWayTrip",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OneWayTrip"
+    },
+    "id" : "86",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "http://ontology.group10travel.com#NonDirectFlight",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NonDirectFlight"
+    },
+    "id" : "65",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "96",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "88",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "92",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "99",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "95",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "101",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://dbpedia.org/ontology/City",
+    "baseIri" : "http://dbpedia.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "City"
+    },
+    "attributes" : [ "external" ],
+    "id" : "106"
+  }, {
+    "iri" : "http://ontology.group10travel.com#User",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "User"
+    },
+    "id" : "45",
+    "superClasses" : [ "52" ]
+  }, {
+    "iri" : "http://ontology.group10travel.com#BaggagePolicy",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BaggagePolicy"
+    },
+    "id" : "12"
+  }, {
+    "iri" : "http://schema.org/Airline",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Airline"
+    },
+    "attributes" : [ "external" ],
+    "id" : "55",
+    "superClasses" : [ "52" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "16",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://ontology.group10travel.com#Stopping",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Stopping"
+    },
+    "id" : "71"
+  }, {
+    "iri" : "http://ontology.group10travel.com#FlightPackage",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FlightPackage"
+    },
+    "id" : "5"
+  }, {
+    "iri" : "http://ontology.group10travel.com#CancellationPolicy",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CancellationPolicy"
+    },
+    "subClasses" : [ "14", "21" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://ontology.group10travel.com#FirstClass",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FirstClass"
+    },
+    "id" : "115",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://ontology.group10travel.com#EconomyClass",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EconomyClass"
+    },
+    "id" : "121",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://ontology.group10travel.com#CabinClass",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CabinClass"
+    },
+    "subClasses" : [ "80", "115", "121" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://ontology.group10travel.com#SpecialmealService",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SpecialmealService"
+    },
+    "id" : "2",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://ontology.group10travel.com#WifionBoardService",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WifionBoardService"
+    },
+    "id" : "3",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://ontology.group10travel.com#Trip",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Trip"
+    },
+    "subClasses" : [ "84", "86", "68" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://ontology.group10travel.com#DirectFlight",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DirectFlight"
+    },
+    "id" : "25",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "http://ontology.group10travel.com#Ticket",
+    "baseIri" : "http://ontology.group10travel.com",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Ticket"
+    },
+    "id" : "18"
+  } ],
+  "property" : [ {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "51",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "105",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "108",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "109",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "110",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "112",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "114",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "116",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "118",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "119",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "123",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "124",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "125",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "126",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "127",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "128",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "129",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "130",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "131",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "132",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "133",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "136",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "137",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "138",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "139",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "140",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "141",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "142",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "143",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "144",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "145",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "146",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "147",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "148",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "149",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "150",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "151",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "152",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "153",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "154",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "155",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "156",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "157",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "158",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "159",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "160",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "161",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://ontology.group10travel.com#belongsToCabinClass",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "belongsToCabinClass"
+    },
+    "domain" : "5",
+    "attributes" : [ "asymmetric", "irreflexive", "functional", "object" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://ontology.group10travel.com#refundPreDuePercentage",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "refundPreDuePercentage",
+      "undefined" : "refund percentage pre"
+    },
+    "domain" : "9",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://ontology.group10travel.com#cabinBagWeightKg",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "cabinBagWeightKg",
+      "undefined" : "cabin bags kg"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://ontology.group10travel.com#hasAddress",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasAddress"
+    },
+    "domain" : "16",
+    "attributes" : [ "asymmetric", "inverse functional", "functional", "object" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://ontology.group10travel.com#chosenMealServicePrice",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "chosenMealServicePrice",
+      "undefined" : "chosen meal price"
+    },
+    "domain" : "18",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://ontology.group10travel.com#belongsToPackage",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "belongsToPackage"
+    },
+    "domain" : "18",
+    "attributes" : [ "asymmetric", "irreflexive", "functional", "object" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://ontology.group10travel.com#includesBaggagePolicy",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "includesBaggagePolicy"
+    },
+    "domain" : "5",
+    "attributes" : [ "asymmetric", "irreflexive", "functional", "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://ontology.group10travel.com#arrivesIn",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "arrivesIn"
+    },
+    "domain" : "25",
+    "attributes" : [ "asymmetric", "irreflexive", "functional", "object" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://ontology.group10travel.com#flightNumber",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "flightNumber",
+      "undefined" : "flight Number"
+    },
+    "domain" : "36",
+    "attributes" : [ "key", "datatype", "functional" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://ontology.group10travel.com#isAvailable",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "isAvailable"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://ontology.group10travel.com#books",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "books"
+    },
+    "domain" : "45",
+    "attributes" : [ "asymmetric", "irreflexive", "inverse functional", "object" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://ontology.group10travel.com#lastName",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "lastName",
+      "undefined" : "last name"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "49"
+  }, {
+    "range" : "3",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "51"
+  }, {
+    "iri" : "http://ontology.group10travel.com#introduceAirlineService",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "introduceAirlineService"
+    },
+    "domain" : "55",
+    "attributes" : [ "asymmetric", "irreflexive", "inverse functional", "object" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://ontology.group10travel.com#cabinBagDimensionCm",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "cabinBagDimensionCm",
+      "undefined" : "cabin bag cm"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://ontology.group10travel.com#postalCode",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "59",
+    "label" : {
+      "IRI-based" : "postalCode"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://ontology.group10travel.com#introduceBaggagePolicy",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "introduceBaggagePolicy"
+    },
+    "domain" : "55",
+    "attributes" : [ "asymmetric", "irreflexive", "inverse functional", "object" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://ontology.group10travel.com#organizeFlight",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "organizeFlight"
+    },
+    "domain" : "55",
+    "attributes" : [ "asymmetric", "irreflexive", "inverse functional", "object" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://ontology.group10travel.com#requestedExessiveBaggaeKG",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "67",
+    "label" : {
+      "IRI-based" : "requestedExessiveBaggaeKG",
+      "undefined" : "requested excessive kg"
+    },
+    "domain" : "18",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://ontology.group10travel.com#includesStopping",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "71",
+    "label" : {
+      "IRI-based" : "includesStopping"
+    },
+    "domain" : "65",
+    "attributes" : [ "asymmetric", "irreflexive", "inverse functional", "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://ontology.group10travel.com#excessivePricePerKg",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "excessivePricePerKg",
+      "undefined" : "excessive price per kg"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://ontology.group10travel.com#includesCancellationPolicy",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "includesCancellationPolicy"
+    },
+    "domain" : "5",
+    "attributes" : [ "asymmetric", "irreflexive", "functional", "object" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://ontology.group10travel.com#hasTicket",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "hasTicket"
+    },
+    "domain" : "36",
+    "attributes" : [ "asymmetric", "irreflexive", "inverse functional", "object" ],
+    "id" : "75"
+  }, {
+    "iri" : "http://ontology.group10travel.com#tripTax",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "tripTax"
+    },
+    "domain" : "46",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://ontology.group10travel.com#checkedBagsNo",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "checkedBagsNo",
+      "undefined" : "checked bags"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://ontology.group10travel.com#iataCode",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "88",
+    "label" : {
+      "IRI-based" : "iataCode",
+      "undefined" : "IATA code"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://ontology.group10travel.com#hasCabinClass",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "hasCabinClass"
+    },
+    "domain" : "55",
+    "attributes" : [ "asymmetric", "irreflexive", "inverse functional", "object" ],
+    "id" : "89"
+  }, {
+    "iri" : "http://ontology.group10travel.com#includesAirlineService",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "includesAirlineService"
+    },
+    "domain" : "5",
+    "attributes" : [ "asymmetric", "irreflexive", "object" ],
+    "id" : "90"
+  }, {
+    "iri" : "http://ontology.group10travel.com#isoCode",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "92",
+    "label" : {
+      "IRI-based" : "isoCode"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://ontology.group10travel.com#hasContact",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "85",
+    "label" : {
+      "IRI-based" : "hasContact"
+    },
+    "domain" : "52",
+    "attributes" : [ "asymmetric", "irreflexive", "inverse functional", "object" ],
+    "id" : "93"
+  }, {
+    "iri" : "http://ontology.group10travel.com#flightDepartureDateTime",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "95",
+    "label" : {
+      "IRI-based" : "flightDepartureDateTime",
+      "undefined" : "departure date time"
+    },
+    "domain" : "36",
+    "attributes" : [ "key", "datatype", "functional" ],
+    "id" : "94"
+  }, {
+    "iri" : "http://ontology.group10travel.com#durationFrom",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "durationFrom",
+      "undefined" : "duration from"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "97"
+  }, {
+    "iri" : "http://ontology.group10travel.com#airlineName",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "airlineName",
+      "undefined" : "airline name"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
+    "id" : "98"
+  }, {
+    "iri" : "http://ontology.group10travel.com#icaoCode",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "96",
+    "label" : {
+      "IRI-based" : "icaoCode",
+      "undefined" : "ICAO code"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "100"
+  }, {
+    "iri" : "http://ontology.group10travel.com#checkedBagDimensionCm",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "checkedBagDimensionCm",
+      "undefined" : "checked bags cm"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "102"
+  }, {
+    "iri" : "http://ontology.group10travel.com#title",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "title"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "103"
+  }, {
+    "iri" : "http://ontology.group10travel.com#introduceCancellationPolicy",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "introduceCancellationPolicy"
+    },
+    "domain" : "55",
+    "attributes" : [ "asymmetric", "irreflexive", "inverse functional", "object" ],
+    "id" : "104"
+  }, {
+    "iri" : "http://ontology.group10travel.com#flightArrivalDateTime",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "flightArrivalDateTime",
+      "undefined" : "arrival date time"
+    },
+    "domain" : "36",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "105"
+  }, {
+    "iri" : "http://ontology.group10travel.com#durationTo",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "durationTo",
+      "undefined" : "duration to"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "107"
+  }, {
+    "iri" : "http://ontology.group10travel.com#flightType",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "101",
+    "label" : {
+      "IRI-based" : "flightType"
+    },
+    "domain" : "36",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "108"
+  }, {
+    "iri" : "http://ontology.group10travel.com#specialMealType",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "specialMealType",
+      "undefined" : "meal type"
+    },
+    "domain" : "2",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "109"
+  }, {
+    "iri" : "http://ontology.group10travel.com#chosenWifiServicePrice",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "chosenWifiServicePrice",
+      "undefined" : "chosen wifi price"
+    },
+    "domain" : "18",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "110"
+  }, {
+    "range" : "46",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "111"
+  }, {
+    "iri" : "http://ontology.group10travel.com#passportNumber",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "passportNumber"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "112"
+  }, {
+    "range" : "46",
+    "domain" : "86",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "113"
+  }, {
+    "range" : "6",
+    "domain" : "115",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "114"
+  }, {
+    "iri" : "http://ontology.group10travel.com#durationMin",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "durationMin",
+      "undefined" : "duration min"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "116"
+  }, {
+    "range" : "6",
+    "domain" : "80",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "117"
+  }, {
+    "iri" : "http://ontology.group10travel.com#policyFlightType",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "76",
+    "label" : {
+      "IRI-based" : "policyFlightType",
+      "undefined" : "flight type"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "118"
+  }, {
+    "range" : "46",
+    "domain" : "84",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "119"
+  }, {
+    "range" : "6",
+    "domain" : "121",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "120"
+  }, {
+    "range" : "52",
+    "domain" : "55",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "122"
+  }, {
+    "range" : "52",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "123"
+  }, {
+    "range" : "9",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "124"
+  }, {
+    "range" : "9",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "125"
+  }, {
+    "iri" : "http://ontology.group10travel.com#checkedBagWeightKg",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "checkedBagWeightKg",
+      "undefined" : "checked bags kg"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "126"
+  }, {
+    "iri" : "http://ontology.group10travel.com#seatNumberr",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "seatNumberr"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "127"
+  }, {
+    "iri" : "http://ontology.group10travel.com#departsFrom",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "departsFrom"
+    },
+    "domain" : "25",
+    "attributes" : [ "asymmetric", "irreflexive", "functional", "object" ],
+    "id" : "128"
+  }, {
+    "iri" : "http://ontology.group10travel.com#description",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "description"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
+    "id" : "129"
+  }, {
+    "iri" : "http://ontology.group10travel.com#flightDistanceKm",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "99",
+    "label" : {
+      "IRI-based" : "flightDistanceKm",
+      "undefined" : "traveled distance"
+    },
+    "domain" : "36",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "130"
+  }, {
+    "iri" : "http://ontology.group10travel.com#refundPostDuePercentage",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "refundPostDuePercentage",
+      "undefined" : "refund percentage post"
+    },
+    "domain" : "9",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "131"
+  }, {
+    "iri" : "http://ontology.group10travel.com#bookingDate",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "bookingDate",
+      "undefined" : "booking date"
+    },
+    "domain" : "46",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "132"
+  }, {
+    "iri" : "http://ontology.group10travel.com#wifiOnBoardBandWidthMbps",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "61",
+    "label" : {
+      "IRI-based" : "wifiOnBoardBandWidthMbps",
+      "undefined" : "wifi width mbps"
+    },
+    "domain" : "3",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "133"
+  }, {
+    "range" : "36",
+    "domain" : "65",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "134"
+  }, {
+    "range" : "36",
+    "domain" : "25",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "135"
+  }, {
+    "range" : "52",
+    "domain" : "45",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "136"
+  }, {
+    "range" : "0",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "137"
+  }, {
+    "range" : "0",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "138"
+  }, {
+    "iri" : "http://ontology.group10travel.com#cabinBagsNo",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "cabinBagsNo",
+      "undefined" : "cabin bags"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "139"
+  }, {
+    "range" : "0",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "140"
+  }, {
+    "iri" : "http://ontology.group10travel.com#includeTicket",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "includeTicket"
+    },
+    "domain" : "46",
+    "attributes" : [ "inverse functional", "object" ],
+    "id" : "141"
+  }, {
+    "iri" : "http://ontology.group10travel.com#firstName",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "firstName",
+      "undefined" : "first name"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "142"
+  }, {
+    "range" : "65",
+    "domain" : "25",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "143"
+  }, {
+    "range" : "115",
+    "domain" : "121",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "144"
+  }, {
+    "range" : "14",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "145"
+  }, {
+    "range" : "86",
+    "domain" : "84",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "146"
+  }, {
+    "range" : "68",
+    "domain" : "84",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "147"
+  }, {
+    "range" : "68",
+    "domain" : "86",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "148"
+  }, {
+    "range" : "3",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "149"
+  }, {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "150"
+  }, {
+    "iri" : "http://ontology.group10travel.com#price",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "price"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "151"
+  }, {
+    "range" : "121",
+    "domain" : "80",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "152"
+  }, {
+    "range" : "115",
+    "domain" : "80",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "153"
+  }, {
+    "iri" : "http://ontology.group10travel.com#email",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "email"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "154"
+  }, {
+    "iri" : "http://ontology.group10travel.com#policyDueDate",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "81",
+    "label" : {
+      "IRI-based" : "policyDueDate",
+      "undefined" : "policy due"
+    },
+    "domain" : "9",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "155"
+  }, {
+    "iri" : "http://ontology.group10travel.com#stopsAt",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "stopsAt"
+    },
+    "domain" : "71",
+    "attributes" : [ "asymmetric", "irreflexive", "functional", "object" ],
+    "id" : "156"
+  }, {
+    "iri" : "http://ontology.group10travel.com#inCity",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "106",
+    "label" : {
+      "IRI-based" : "inCity"
+    },
+    "domain" : "26",
+    "attributes" : [ "asymmetric", "irreflexive", "functional", "object" ],
+    "id" : "157"
+  }, {
+    "iri" : "http://ontology.group10travel.com#bookingId",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "bookingId"
+    },
+    "cardinality" : "1",
+    "domain" : "46",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "158"
+  }, {
+    "iri" : "http://ontology.group10travel.com#hasPhone",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasPhone"
+    },
+    "domain" : "16",
+    "attributes" : [ "asymmetric", "irreflexive", "inverse functional", "object" ],
+    "id" : "159"
+  }, {
+    "iri" : "http://ontology.group10travel.com#dateOfBirth",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "dateOfBirth"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "160"
+  }, {
+    "iri" : "http://ontology.group10travel.com#includeSubFlight",
+    "baseIri" : "http://ontology.group10travel.com",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "includeSubFlight"
+    },
+    "domain" : "65",
+    "attributes" : [ "object" ],
+    "id" : "161"
+  } ]
+}

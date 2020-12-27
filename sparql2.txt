@@ -1,0 +1,62 @@
+PREFIX schema: <http://schema.org/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX db: <http://dbpedia.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix group10: <http://ontology.group10travel.com#>
+
+select ?flightNumber ?flightType ?fromAirportName ?toAirportName ?ticketPrice (COUNT(*) AS ?availableTickets)
+where 
+{
+  {
+    # non direct flights
+
+    # source sub flight
+    ?flight group10:includeSubFlight ?srcSubflight .
+    ?srcSubflight group10:isAvailable true .
+    ?srcSubflight group10:departsFrom ?fromAirport .
+    # make sure source sub flight has the same departure date and time
+    ?flight group10:flightDepartureDatetime ?departureTime .
+    ?srcSubflight group10:flightDepartureDatetime ?departureTime .
+    
+    # destination sub flight
+    ?flight group10:includeSubFlight ?destSubflight .
+    ?destSubflight group10:arrivesIn ?toAirport .
+    ?tosubflight group10:isAvailable true .
+    # make sure destination sub flight has the same departure date and time
+    ?flight group10:flightArrivalDatetime  ?arrivalTime .
+    ?destSubflight group10:flightArrivalDatetime ?arrivalTime .
+  }
+  UNION
+  {
+    # direct flights
+    ?flight group10:departsFrom ?fromAirport .
+    ?flight group10:arrivesIn ?toAirport .
+    ?flight group10:isAvailable true .
+	
+    ?flight group10:flightArrivalDateTime ?arrivalTime .
+    ?flight group10:flightDepartureDateTime ?departureTime .  
+  }
+
+  # specify source and destination airports
+  ?fromAirport group10:inCity dbr:Brussels .
+  ?toAirport group10:inCity dbr:Los_Angeles .
+
+  # query information
+  ?flight group10:flightNumber ?flightNumber .
+  ?flight group10:flightType ?flightType .
+  ?fromAirport schema:name ?fromAirportName .
+  ?toAirport schema:name ?toAirportName .
+  
+  ?flight group10:hasTicket ?ticket .
+  ?ticket group10:price ?ticketPrice .
+
+
+  Filter
+  (
+    # make sure ticket price less than specified number
+    (?ticketPrice < 700)
+  )  
+} 
+
+GROUP BY ?flightNumber ?flightType ?fromAirportName ?toAirportName ?ticketPrice
+limit 100

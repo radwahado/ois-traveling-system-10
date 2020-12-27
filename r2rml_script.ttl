@@ -1,0 +1,791 @@
+# This is the vocabulary for creating R2RML
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+# This is the vocabulary of our ontology
+@prefix group10: <http://ontology.group10travel.com#> .
+
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+
+
+<#Airport>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:tableNam"airport" ] ;
+	rr:subjectMap [
+		  rr:template "http://data.group10travel.com#Airport__{iata_code}" ;
+		  rr:class schema:Airport ;
+		  rr:class group10:Entity ;
+	  ] ;
+	rr:predicateObjectMap [
+		  rr:predicate schema:name ;
+		  rr:objectMap [ rr:column "name"; rr:datatype schema:Text ] ;
+	  ] ;
+	rr:predicateObjectMap [
+		  rr:predicate schema:iataCode ;
+		  rr:objectMap [ rr:column "iata_code"; rr:datatype schema:Text ] ;
+	  ] ;
+	rr:predicateObjectMap [
+		  rr:predicate group10:hasContact ;
+		  rr:objectMap [
+			   rr:parentTriplesMap <#AirportContactPoint> ;
+			   rr:joinCondition [
+					rr:child "iata_code" ;
+					rr:parent "iata_code"
+				]
+		   ]
+	  ] ;
+	rr:predicateObjectMap [
+		  rr:predicate group10:inCity ;
+		  rr:objectMap [ rr:template "http://dbpedia.org/resource/{city_dbpedia}" ] ;
+	  ] ;
+.
+
+
+<#AirlineContactPoint>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:tableName "airline" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#ContactPoint__Airline_{icao_code}" ;
+					  rr:class schema:ContactPoint ;
+				  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate schema:email ;
+							  rr:objectMap [ rr:column "email"; rr:datatype schema:Text ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate schema:telephone ;
+							  rr:objectMap [ rr:column "phone_number"; rr:datatype schema:Text ] ;
+						  ] ;
+.
+
+<#AirportContactPoint>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:tableName "airport" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#ContactPoint__Airport_{iata_code}" ;
+					  rr:class schema:ContactPoint ;
+				  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate schema:email ;
+							  rr:objectMap [ rr:column "email"; rr:datatype schema:Text ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate schema:telephone ;
+							  rr:objectMap [ rr:column "phone_number"; rr:datatype schema:Text ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate schema:areaServed ;
+							  rr:objectMap [ rr:column "address"; rr:datatype schema:Text ] ;
+						  ] ;
+.
+
+
+<#UserContactPoint>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:tableName "user" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#ContactPoint__User_{passport_number}_{first_name}_{last_name}" ;
+					  rr:class schema:ContactPoint ;
+				  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate schema:email ;
+							  rr:objectMap [ rr:column "email"; rr:datatype schema:Text ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate schema:telephone ;
+							  rr:objectMap [ rr:column "phone_number"; rr:datatype schema:Text ] ;
+						  ] ;
+.
+
+
+
+
+
+
+<#Airline>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:tableName "airline" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#Airline__{icao_code}" ;
+					  rr:class schema:Airline ;
+				      rr:class group10:Entity ;
+				  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate schema:iataCode ;
+							  rr:objectMap [ rr:column "iata_code"; rr:datatype schema:Text ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate schema:ContactPoint ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#AirlineContactPoint> ;
+											   rr:joinCondition [
+																	rr:child "icao_code" ;
+																	rr:parent "icao_code"
+																]
+										   ]
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:hasCabinClass ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#CabinClass> ;
+											   rr:joinCondition [
+																	rr:child "icao_code" ;
+																	rr:parent "airline_icao_code"
+																]
+										   ]
+						  ];
+
+	rr:predicateObjectMap [
+							  rr:predicate group10:organizeFlight ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#Flight> ;
+											   rr:joinCondition [
+																	rr:child "icao_code" ;
+																	rr:parent "airline_icao_code"
+																]
+										   ]
+						  ] ;
+
+	rr:predicateObjectMap [
+							  rr:predicate group10:introduceBaggagePolicy ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#BaggagePolicy> ;
+											   rr:joinCondition [
+																	rr:child "icao_code" ;
+																	rr:parent "airline_icao_code"
+																]
+										   ]
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:introduceCancellationPolicy ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#CancellationPolicy> ;
+											   rr:joinCondition [
+																	rr:child "icao_code" ;
+																	rr:parent "airline_icao_code"
+																]
+										   ]
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:introduceAirlineService ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#AirlineService> ;
+											   rr:joinCondition [
+																	rr:child "icao_code" ;
+																	rr:parent "airline_icao_code"
+																]
+										   ]
+						  ] ;
+.
+
+
+
+
+<#Flight>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:sqlQuery """SELECT *,
+                                    REPLACE(arrival_date, ' ', 'T') AS arrival_date_,
+                                    REPLACE(departure_date, ' ', 'T') AS departure_date_
+                                    FROM flight
+                                    """ ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#Flight__{number}" ;
+					  rr:class group10:Flight ;
+				  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:flightArrivalDatetime ;
+							  rr:objectMap [ rr:column "arrival_date_"; rr:datatype xsd:dateTime ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:flightDepartureDatetime ;
+							  rr:objectMap [ rr:column "departure_date_" ; rr:datatype xsd:dateTime] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:flightDistanceKm ;
+							  rr:objectMap [ rr:column "distance_km" ;
+											 rr:datatype xsd:double] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:durationMin ;
+							  rr:objectMap [ rr:column "duration_min" ;
+											 rr:datatype xsd:double] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:flightNumber ;
+							  rr:objectMap [ rr:column "number"; rr:datatype xsd:string ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:isAvailable ;
+							  rr:objectMap [ rr:column "is_available"; rr:datatype xsd:boolean ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:flightType ;
+							  rr:objectMap [ rr:column "type"; rr:datatype xsd:string ] ;
+						  ] ;
+
+	rr:predicateObjectMap [
+							  rr:predicate group10:hasTicket ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#Ticket> ;
+											   rr:joinCondition [
+																	rr:child "number" ;
+																	rr:parent "flight_number"
+																]
+										   ]
+						  ] ;
+.
+
+
+
+<#DirectFlight>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:tableName "direct_flight" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#Flight__{flight_number}" ;
+					  rr:class group10:DirectFlight ;
+				  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:departsFrom ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#Airport> ;
+											   rr:joinCondition [
+																	rr:child "departure_airport_iata_code" ;
+																	rr:parent "iata_code"
+																]
+										   ]
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:arrivesIn ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#Airport> ;
+											   rr:joinCondition [
+																	rr:child "arriving_airport_iata_code" ;
+																	rr:parent "iata_code"
+																]
+										   ]
+						  ] ;
+.
+
+#
+#
+#
+<#Stopping>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:sqlQuery """SELECT *,
+                                    REPLACE(duration_from, ' ', 'T') AS duration_from_,
+                                    REPLACE(duration_to, ' ', 'T') AS duration_to_
+                                    FROM stopping
+                                    """ ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#Stopping__{flight_number}_{airport_iatacode}" ;
+					  rr:class group10:Stopping ;
+				  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:durationMin ;
+							  rr:objectMap [ rr:column "duration_min" ;
+											 rr:datatype xsd:double ;]
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:durationFrom ;
+							  rr:objectMap [ rr:column "duration_from_" ; rr:datatype xsd:dateTime] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:durationTo ;
+							  rr:objectMap [ rr:column "duration_to_" ; rr:datatype xsd:dateTime] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:stopsAt ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#Airport> ;
+											   rr:joinCondition [
+																	rr:child "airport_iatacode" ;
+																	rr:parent "iata_code"
+																]
+										   ]
+						  ] ;
+.
+#
+#
+#
+
+<#NonDirectFlight>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:tableName "non_direct_flight" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#Flight__{flight_number}" ;
+					  rr:class group10:NonDirectFlight ;
+				  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:includeSubFlight ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#DirectFlight> ;
+											   rr:joinCondition [
+																	rr:child "subflight_number" ;
+																	rr:parent "flight_number"
+																]
+										   ]
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:includesStopping ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#Stopping> ;
+											   rr:joinCondition [
+																	rr:child "flight_number" ;
+																	rr:parent "flight_number"
+																]
+										   ]
+						  ] ;
+.
+
+
+
+
+
+#
+#
+
+#
+#
+#
+<#CabinClass>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:tableName "cabin_class" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#CabinClass__{airline_icao_code}_{title}" ;
+					  rr:class group10:CabinClass ;
+				  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:title ;
+							  rr:objectMap [ rr:column "title"; rr:datatype xsd:string ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:description ;
+							  rr:objectMap [ rr:column "description"; rr:datatype xsd:string ] ;
+						  ] ;
+.
+#
+#
+
+
+
+
+<#BaggagePolicy>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:tableName "baggage_policy" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#BaggagePolicy__{airline_icao_code}_{title}" ;
+					  rr:class group10:BaggagePolicy ;
+				  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:cabinBagDimensionCm ;
+							  rr:objectMap [ rr:column "cabin_bag_dimension_cm" ;
+											 rr:datatype xsd:double] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:cabinBagsNo ;
+							  rr:objectMap [ rr:column "cabin_bags_no";
+											 rr:datatype xsd:double] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:cabinBagWeightKg ;
+							  rr:objectMap [ rr:column "cabin_bag_weight_kg" ;
+											 rr:datatype xsd:double] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:checkedBagDimensionCm ;
+							  rr:objectMap [ rr:column "checked_bag_dimension_cm";
+											 rr:datatype xsd:double] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:checkedBagsNo ;
+							  rr:objectMap [ rr:column "checked_bags_no" ;
+											 rr:datatype xsd:double] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:checkedBagWeightKg ;
+							  rr:objectMap [ rr:column "checked_bag_weight_kg" ;
+											 rr:datatype xsd:double] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:excessivePricePerKg ;
+							  rr:objectMap [ rr:column "excessive_price_perkg" ;
+											 rr:datatype xsd:double] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:title ;
+							  rr:objectMap [ rr:column "title"; rr:datatype xsd:string ] ;
+						  ] ;
+
+.
+
+<#CancellationPolicy>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:tableName "cancellation_policy" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#CancellationPolicy__{airline_icao_code}_{title}" ;
+					  rr:class group10:CancellationPolicy ;
+				  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:description ;
+							  rr:objectMap [ rr:column "description"; rr:datatype xsd:string ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:policyDueDate ;
+							  rr:objectMap [ rr:column "due_date"; rr:datatype xsd:string ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:refundPostDuePercentage ;
+							  rr:objectMap [ rr:column "refund_postdue_percentage" ;
+											 rr:datatype xsd:double ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:refundPreDuePercentage ;
+							  rr:objectMap [ rr:column "refund_predue_percentage" ;
+											 rr:datatype xsd:double ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:title ;
+							  rr:objectMap [ rr:column "title"; rr:datatype xsd:string ] ;
+						  ] ;
+.
+
+
+
+#
+#
+<#AirlineService>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:tableName "airline_service" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#AirlineService__{airline_icao_code}_{title}" ;
+					  rr:class group10:AirlineService ;
+				  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:description ;
+							  rr:objectMap [ rr:column "description"; rr:datatype xsd:string ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:price ;
+							  rr:objectMap [ rr:column "price" ;
+											 rr:datatype xsd:double ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:title ;
+							  rr:objectMap [ rr:column "title"; rr:datatype xsd:string ] ;
+						  ] ;
+#
+.
+#
+
+<#AirLineService2>
+	a rr:TriplesMap ;
+	rr:logicalTable [
+						rr:sqlQuery """SELECT package_service.flight_package_title, flight_package.cabin_class_title, package_service.airline_service_title
+						FROM package_service
+						JOIN flight_package
+						ON package_service.flight_package_title = flight_package.title"""
+					] ;
+
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#FlightPackage__{cabin_class_title}_{flight_package_title}" ;
+					  rr:class group10:FlightPackage ;
+				  ] ;
+
+	rr:predicateObjectMap [
+							  rr:predicate group10:includesAirlineService ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#AirlineService> ;
+											   rr:joinCondition [
+																	rr:child "airline_service_title" ;
+																	rr:parent "title"
+																]
+										   ]
+						  ] ;
+.
+
+
+
+<#AirlineService_SpecialMeal>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:sqlQuery """SELECT service.airline_icao_code, service.title, special_meal_type.meal_type
+									FROM (SELECT title, airline_icao_code
+										FROM airline_service WHERE service_type = 'special_meal') AS service
+										LEFT JOIN special_meal_type
+										ON service.title = special_meal_type.airline_service_title
+										""" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#AirlineService__{airline_icao_code}_{title}" ;
+					  rr:class group10:SpecialmealService ;
+				  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:specialMealType ;
+							  rr:objectMap [ rr:column "meal_type" ] ;
+						  ] ;
+.
+
+<#AirlineService_WifiOnBoard>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:sqlQuery """SELECT service.airline_icao_code, service.title, wifi_onboard_service.wifi_onboard_service_bandwidth_MB
+									FROM (SELECT title, airline_icao_code
+										FROM airline_service WHERE service_type = 'wifi_on_board') AS service
+										LEFT JOIN wifi_onboard_service
+										ON service.title = wifi_onboard_service.airline_service_title
+										""" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#AirlineService__{airline_icao_code}_{title}" ;
+					  rr:class group10:WifionBoardService ;
+				  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:wifiOnBoardBandWidthMbps ;
+							  rr:objectMap [ rr:column "wifi_onboard_service_bandwidth_MB";
+											 rr:datatype xsd:double] ;
+						  ] ;
+.
+
+<#AirlineService_SeatSelection>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:sqlQuery """SELECT * FROM airline_service WHERE service_type = 'seat_selection'""" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#AirlineService__{airline_icao_code}_{title}" ;
+					  rr:class group10:SeatSelectionService ;
+				  ] ;
+.
+
+
+
+<#CancellationPolicy_Flexible>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:sqlQuery """SELECT * FROM cancellation_policy WHERE refund_predue_percentage = 100""" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#CancellationPolicy__{airline_icao_code}_{title}" ;
+					  rr:class group10:FlexibleCancellation ;
+				  ] ;
+.
+
+
+
+
+
+<#FlightPackage>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:tableName "flight_package" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#FlightPackage__{cabin_class_title}_{title}" ;
+					  rr:class group10:FlightPackage ;
+				  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:title ;
+							  rr:objectMap [ rr:column "title"; rr:datatype xsd:string ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:description ;
+							  rr:objectMap [ rr:column "description"; rr:datatype xsd:string ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:belongsToCabinClass ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#CabinClass> ;
+											   rr:joinCondition [
+																	rr:child "cabin_class_title" ;
+																	rr:parent "title"
+																]
+										   ]
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:includesBaggagePolicy ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#BaggagePolicy> ;
+											   rr:joinCondition [
+																	rr:child "baggage_policy_title" ;
+																	rr:parent "title"
+																]
+										   ]
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:includesCancellationPolicy ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#CancellationPolicy> ;
+											   rr:joinCondition [
+																	rr:child "cancelation_policy_title" ;
+																	rr:parent "title"
+																]
+										   ]
+						  ] ;
+
+.
+
+
+
+<#Ticket>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:tableName "ticket" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#Ticket__{flight_number}_{seat_number}" ;
+					  rr:class group10:Ticket ;
+				  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:price ;
+							  rr:objectMap [ rr:column "price"; rr:datatype xsd:double ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:requestedExcessiveBaggagekg ;
+							  rr:objectMap [ rr:column "requested_excessive_baggage_kg"; rr:datatype xsd:double ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:chosenMealServicePrice ;
+							  rr:objectMap [ rr:column "chosen_meal_service_price"; rr:datatype xsd:double ;] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:chosenWifiServicePrice ;
+							  rr:objectMap [ rr:column "chosen_wifi_service_price" ; rr:datatype xsd:double ; ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:belongsToPackage ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#FlightPackage> ;
+											   rr:joinCondition [
+																	rr:child "package_title" ;
+																	rr:parent "title"
+																]
+										   ]
+						  ] ;
+.
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+#
+
+
+#
+#
+#
+#
+#
+#
+<#Trip>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:sqlQuery """SELECT *, REPLACE(booking_date, ' ', 'T') AS booking_date_ FROM trip""" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#Trip__{id}" ;
+					  rr:class group10:Trip ;
+				  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:bookingDate ;
+							  rr:objectMap [ rr:column "booking_date_"; rr:datatype xsd:dateTime ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:tripTax ;
+							  rr:objectMap [ rr:column "tax"; rr:datatype xsd:double ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:bookingId ;
+							  rr:objectMap [ rr:column "id"; rr:datatype xsd:string ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:includeTicket ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#Ticket> ;
+											   rr:joinCondition [
+																	rr:child "id" ;
+																	rr:parent "trip_id"
+																]
+										   ]
+						  ] ;
+.
+
+
+
+
+<#OneWayTrip>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:sqlQuery """SELECT *
+							FROM trip WHERE type = 'one-way'""" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#Trip__{id}" ;
+					  rr:class group10:OneWayTrip ;
+				  ] ;
+.
+<#MultiCityTrip>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:sqlQuery """SELECT * FROM trip WHERE type = 'multi-city'""" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#Trip__{id}" ;
+					  rr:class group10:MultiCityTrip ;
+				  ] ;
+.
+
+<#RoundTrip>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:sqlQuery """SELECT *
+							FROM trip WHERE type = 'round-trip'""" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#Trip__{id}" ;
+					  rr:class group10:RoundTrip ;
+				  ] ;
+.
+
+
+
+
+#
+<#User>
+	a rr:TriplesMap ;
+	rr:logicalTable [ rr:sqlQuery """SELECT *, REPLACE(email, '@', '%40') AS email_ FROM user""" ] ;
+	rr:subjectMap [
+					  rr:template "http://data.group10travel.com#User__{passport_number}_{first_name}_{last_name}" ;
+					  rr:class group10:User ;
+					  rr:class group10:Entity ;
+				  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:passportNumber ;
+							  rr:objectMap [ rr:column "passport_number"; rr:datatype xsd:string ; ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:firstName ;
+							  rr:objectMap [ rr:column "first_name"; rr:datatype xsd:string ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:lastName ;
+							  rr:objectMap [ rr:column "last_name"; rr:datatype xsd:string ] ;
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate group10:books ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#Trip> ;
+											   rr:joinCondition [
+																	rr:child "email" ;
+																	rr:parent "user_email"
+																]
+										   ]
+						  ] ;
+	rr:predicateObjectMap [
+							  rr:predicate schema:ContactPoint ;
+							  rr:objectMap [
+											   rr:parentTriplesMap <#UserContactPoint> ;
+											   rr:joinCondition [
+																	rr:child "passport_number" ;
+																	rr:parent "passport_number"
+																]
+										   ]
+						  ] ;
+.
+
+#
+#
+
+
+

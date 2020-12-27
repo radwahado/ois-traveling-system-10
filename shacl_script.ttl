@@ -1,0 +1,229 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix group10: <http://ontology.group10travel.com#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+
+schema:AirportShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Airport ;
+    sh:property [
+                    sh:path schema:name ;
+                    sh:datatype schema:Text ;
+                ] ;
+    sh:property [
+                    sh:path schema:iataCode ;
+                    sh:datatype schema:Text ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                ] ;
+    sh:property [
+                    sh:path group10:hasContact ;
+                    sh:class schema:ContactPoint ;
+                ] ;
+    sh:property [
+                    sh:path group10:inCity ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                ] ;
+.
+#
+
+schema:AirlineShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Airline ;
+    sh:property [
+                    sh:path schema:iataCode ;
+                    sh:datatype schema:Text ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                ] ;
+    sh:property [
+                    sh:path group10:hasContact ;
+                    sh:class schema:ContactPoint ;
+                ] ;
+    sh:property [
+                    sh:path group10:hasCabinClass ;
+                    sh:class group10:CabinClass ;
+                    sh:minCount 1 ;
+                ] ;
+    sh:property [
+                    sh:path group10:organizeFlight ;
+                    sh:class group10:Flight ;
+                ] ;
+    sh:property [
+                    sh:path group10:introduceCancellationPolicy ;
+                    sh:class group10:CancellationPolicy ;
+                    sh:minCount 1 ;
+                ] ;
+    sh:property [
+                    sh:path group10:introduceBaggagePolicy ;
+                    sh:class group10:BaggagePolicy ;
+                    sh:minCount 1 ;
+                ] ;
+.
+
+
+schema:FlightShape
+    a sh:NodeShape ;
+    sh:targetClass group10:Flight ;
+    sh:property [
+                    sh:path group10:flightNumber ;
+                    sh:datatype xsd:string ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                ] ;
+    sh:property [
+                    sh:path group10:flightDepartureDatetime ;
+                    sh:datatype xsd:dateTime ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:lessThan group10:flightArrivalDatetime ;
+                ] ;
+    sh:property [
+                    sh:path group10:flightArrivalDatetime ;
+                    sh:datatype xsd:dateTime ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                ] ;
+    sh:property [
+                    sh:path group10:hasTicket ;
+                    sh:class group10:Ticket ;
+                    sh:minCount 1 ;
+                ] ;
+.
+
+schema:DirectFlightShape
+    a sh:NodeShape ;
+    sh:targetClass group10:DirectFlight ;
+    sh:property [
+                    sh:path group10:departsFrom ;
+                    sh:class schema:Airport ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                ] ;
+    sh:property [
+                    sh:path group10:arrivesIn ;
+                    sh:class schema:Airport ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                ] ;
+.
+
+schema:NonDirectFlightShape
+    a sh:NodeShape ;
+    sh:targetClass group10:NonDirectFlight ;
+    sh:property [
+                    sh:path group10:includeSubFlight ;
+                    sh:class group10:DirectFlight ;
+                    sh:minCount 2 ;
+                ] ;
+    sh:property [
+                    sh:path group10:includesStopping ;
+                    sh:class group10:Stopping ;
+                    sh:minCount 1 ;
+                ] ;
+.
+
+schema:Stopping
+    a sh:NodeShape ;
+    sh:targetClass group10:Stopping ;
+    sh:property [
+                    sh:path group10:stopsAt ;
+                    sh:class schema:Airport ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                ] ;
+.
+
+
+
+
+schema:FlightPackageShape
+    a sh:NodeShape ;
+    sh:targetClass group10:FlightPackage ;
+    sh:property [
+                    sh:path group10:belongsToCabinClass ;
+                    sh:class group10:CabinClass ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                ] ;
+    sh:property [
+                    sh:path group10:includesBaggagePolicy ;
+                    sh:class group10:BaggagePolicy ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                ] ;
+    sh:property [
+                    sh:path group10:includesCancellationPolicy ;
+                    sh:class group10:CancellationPolicy ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                ] ;
+    sh:property [
+                    sh:path group10:includesAirlineService ;
+                    sh:class group10:AirlineService ;
+                ] ;
+.
+
+
+
+#
+#
+schema:TicketShape
+    a sh:NodeShape ;
+    sh:targetClass group10:Ticket ;
+    sh:property [
+                    sh:path group10:belongsToPackage ;
+                    sh:class group10:FlightPackage ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                ] ;
+.
+
+
+schema:TripShape
+    a sh:NodeShape ;
+    sh:targetClass group10:Trip ;
+    sh:property [
+                    sh:path group10:includeTicket ;
+                    sh:class group10:Ticket ;
+                    sh:minCount 1 ;
+                ] ;
+.
+
+
+schema:OneWayTripShape
+    a sh:NodeShape ;
+    sh:targetClass group10:OneWayTrip ;
+    sh:property [
+                    sh:path group10:includeTicket ;
+                    sh:class group10:Ticket ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                ] ;
+.
+
+
+schema:MultiCityTripShape
+    a sh:NodeShape ;
+    sh:targetClass group10:MultiCityTrip ;
+    sh:property [
+                    sh:path group10:includeTicket ;
+                    sh:class group10:Ticket ;
+                    sh:minCount 2 ;
+                ] ;
+.
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,639 @@
+<http://ontology.group10travel.com> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://ontology.group10travel.com> <http://www.w3.org/2000/01/rdf-schema#label> "traveling system to search for flights based on different criteria: direct/non-direct, arrival date, departure date..etc" .
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#datetime
+<http://www.w3.org/2001/XMLSchema#datetime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2001/XMLSchema#dobule
+<http://www.w3.org/2001/XMLSchema#dobule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2006/time#Duration
+<http://www.w3.org/2006/time#Duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://ontology.group10travel.com#arrivesIn
+<http://ontology.group10travel.com#arrivesIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#arrivesIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#arrivesIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.group10travel.com#arrivesIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.group10travel.com#arrivesIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#DirectFlight> .
+<http://ontology.group10travel.com#arrivesIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Airport> .
+# 
+# http://ontology.group10travel.com#belongsToCabinClass
+<http://ontology.group10travel.com#belongsToCabinClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#belongsToCabinClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#belongsToCabinClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.group10travel.com#belongsToCabinClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.group10travel.com#belongsToCabinClass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#FlightPackage> .
+<http://ontology.group10travel.com#belongsToCabinClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.group10travel.com#CabinClass> .
+# 
+# http://ontology.group10travel.com#belongsToPackage
+<http://ontology.group10travel.com#belongsToPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#belongsToPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#belongsToPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.group10travel.com#belongsToPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.group10travel.com#belongsToPackage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#Ticket> .
+<http://ontology.group10travel.com#belongsToPackage> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.group10travel.com#FlightPackage> .
+# 
+# http://ontology.group10travel.com#books
+<http://ontology.group10travel.com#books> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#books> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://ontology.group10travel.com#books> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.group10travel.com#books> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.group10travel.com#books> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#User> .
+<http://ontology.group10travel.com#books> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.group10travel.com#Trip> .
+# 
+# http://ontology.group10travel.com#departsFrom
+<http://ontology.group10travel.com#departsFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#departsFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#departsFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.group10travel.com#departsFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.group10travel.com#departsFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#DirectFlight> .
+<http://ontology.group10travel.com#departsFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Airport> .
+# 
+# http://ontology.group10travel.com#hasAddress
+<http://ontology.group10travel.com#hasAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#hasAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#hasAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://ontology.group10travel.com#hasAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+# 
+# http://ontology.group10travel.com#hasCabinClass
+<http://ontology.group10travel.com#hasCabinClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#hasCabinClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://ontology.group10travel.com#hasCabinClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.group10travel.com#hasCabinClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.group10travel.com#hasCabinClass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Airline> .
+<http://ontology.group10travel.com#hasCabinClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.group10travel.com#CabinClass> .
+# 
+# http://ontology.group10travel.com#hasContact
+<http://ontology.group10travel.com#hasContact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#hasContact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://ontology.group10travel.com#hasContact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.group10travel.com#hasContact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.group10travel.com#hasContact> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#Entity> .
+<http://ontology.group10travel.com#hasContact> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/ContactPoint> .
+# 
+# http://ontology.group10travel.com#hasPhone
+<http://ontology.group10travel.com#hasPhone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#hasPhone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://ontology.group10travel.com#hasPhone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.group10travel.com#hasPhone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+# 
+# http://ontology.group10travel.com#hasTicket
+<http://ontology.group10travel.com#hasTicket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#hasTicket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://ontology.group10travel.com#hasTicket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.group10travel.com#hasTicket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.group10travel.com#hasTicket> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#Flight> .
+<http://ontology.group10travel.com#hasTicket> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.group10travel.com#Ticket> .
+# 
+# http://ontology.group10travel.com#inCity
+<http://ontology.group10travel.com#inCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#inCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#inCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.group10travel.com#inCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.group10travel.com#inCity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Airport> .
+<http://ontology.group10travel.com#inCity> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/City> .
+# 
+# http://ontology.group10travel.com#includeSubFlight
+<http://ontology.group10travel.com#includeSubFlight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#includeSubFlight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#NonDirectFlight> .
+<http://ontology.group10travel.com#includeSubFlight> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.group10travel.com#DirectFlight> .
+# 
+# http://ontology.group10travel.com#includeTicket
+<http://ontology.group10travel.com#includeTicket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#includeTicket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://ontology.group10travel.com#includeTicket> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#Trip> .
+<http://ontology.group10travel.com#includeTicket> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.group10travel.com#Ticket> .
+# 
+# http://ontology.group10travel.com#includesAirlineService
+<http://ontology.group10travel.com#includesAirlineService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#includesAirlineService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.group10travel.com#includesAirlineService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.group10travel.com#includesAirlineService> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#FlightPackage> .
+<http://ontology.group10travel.com#includesAirlineService> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.group10travel.com#AirlineService> .
+# 
+# http://ontology.group10travel.com#includesBaggagePolicy
+<http://ontology.group10travel.com#includesBaggagePolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#includesBaggagePolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#includesBaggagePolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.group10travel.com#includesBaggagePolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.group10travel.com#includesBaggagePolicy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#FlightPackage> .
+<http://ontology.group10travel.com#includesBaggagePolicy> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.group10travel.com#BaggagePolicy> .
+# 
+# http://ontology.group10travel.com#includesCancellationPolicy
+<http://ontology.group10travel.com#includesCancellationPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#includesCancellationPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#includesCancellationPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.group10travel.com#includesCancellationPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.group10travel.com#includesCancellationPolicy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#FlightPackage> .
+<http://ontology.group10travel.com#includesCancellationPolicy> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.group10travel.com#CancellationPolicy> .
+# 
+# http://ontology.group10travel.com#includesStopping
+<http://ontology.group10travel.com#includesStopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#includesStopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://ontology.group10travel.com#includesStopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.group10travel.com#includesStopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.group10travel.com#includesStopping> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#NonDirectFlight> .
+<http://ontology.group10travel.com#includesStopping> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.group10travel.com#Stopping> .
+# 
+# http://ontology.group10travel.com#introduceAirlineService
+<http://ontology.group10travel.com#introduceAirlineService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#introduceAirlineService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://ontology.group10travel.com#introduceAirlineService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.group10travel.com#introduceAirlineService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.group10travel.com#introduceAirlineService> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Airline> .
+<http://ontology.group10travel.com#introduceAirlineService> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.group10travel.com#AirlineService> .
+# 
+# http://ontology.group10travel.com#introduceBaggagePolicy
+<http://ontology.group10travel.com#introduceBaggagePolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#introduceBaggagePolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://ontology.group10travel.com#introduceBaggagePolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.group10travel.com#introduceBaggagePolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.group10travel.com#introduceBaggagePolicy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Airline> .
+<http://ontology.group10travel.com#introduceBaggagePolicy> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.group10travel.com#BaggagePolicy> .
+# 
+# http://ontology.group10travel.com#introduceCancellationPolicy
+<http://ontology.group10travel.com#introduceCancellationPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#introduceCancellationPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://ontology.group10travel.com#introduceCancellationPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.group10travel.com#introduceCancellationPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.group10travel.com#introduceCancellationPolicy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Airline> .
+<http://ontology.group10travel.com#introduceCancellationPolicy> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.group10travel.com#CancellationPolicy> .
+# 
+# http://ontology.group10travel.com#organizeFlight
+<http://ontology.group10travel.com#organizeFlight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#organizeFlight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://ontology.group10travel.com#organizeFlight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.group10travel.com#organizeFlight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.group10travel.com#organizeFlight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Airline> .
+<http://ontology.group10travel.com#organizeFlight> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.group10travel.com#Flight> .
+# 
+# http://ontology.group10travel.com#stopsAt
+<http://ontology.group10travel.com#stopsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontology.group10travel.com#stopsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#stopsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://ontology.group10travel.com#stopsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://ontology.group10travel.com#stopsAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#Stopping> .
+<http://ontology.group10travel.com#stopsAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Airport> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://ontology.group10travel.com#airlineName
+<http://ontology.group10travel.com#airlineName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#airlineName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontology.group10travel.com#airlineName> <http://www.w3.org/2000/01/rdf-schema#label> "airline name" .
+# 
+# http://ontology.group10travel.com#bookingDate
+<http://ontology.group10travel.com#bookingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#bookingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#bookingDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#Trip> .
+<http://ontology.group10travel.com#bookingDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://ontology.group10travel.com#bookingDate> <http://www.w3.org/2000/01/rdf-schema#label> "booking date" .
+# 
+# http://ontology.group10travel.com#bookingId
+<http://ontology.group10travel.com#bookingId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#bookingId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#bookingId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#Trip> .
+<http://ontology.group10travel.com#bookingId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://ontology.group10travel.com#cabinBagDimensionCm
+<http://ontology.group10travel.com#cabinBagDimensionCm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#cabinBagDimensionCm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#cabinBagDimensionCm> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#BaggagePolicy> .
+<http://ontology.group10travel.com#cabinBagDimensionCm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://ontology.group10travel.com#cabinBagDimensionCm> <http://www.w3.org/2000/01/rdf-schema#label> "cabin bag cm" .
+# 
+# http://ontology.group10travel.com#cabinBagWeightKg
+<http://ontology.group10travel.com#cabinBagWeightKg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#cabinBagWeightKg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#cabinBagWeightKg> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#BaggagePolicy> .
+<http://ontology.group10travel.com#cabinBagWeightKg> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://ontology.group10travel.com#cabinBagWeightKg> <http://www.w3.org/2000/01/rdf-schema#label> "cabin bags kg" .
+# 
+# http://ontology.group10travel.com#cabinBagsNo
+<http://ontology.group10travel.com#cabinBagsNo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#cabinBagsNo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#cabinBagsNo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#BaggagePolicy> .
+<http://ontology.group10travel.com#cabinBagsNo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://ontology.group10travel.com#cabinBagsNo> <http://www.w3.org/2000/01/rdf-schema#label> "cabin bags" .
+# 
+# http://ontology.group10travel.com#checkedBagDimensionCm
+<http://ontology.group10travel.com#checkedBagDimensionCm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#checkedBagDimensionCm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#checkedBagDimensionCm> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#BaggagePolicy> .
+<http://ontology.group10travel.com#checkedBagDimensionCm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://ontology.group10travel.com#checkedBagDimensionCm> <http://www.w3.org/2000/01/rdf-schema#label> "checked bags cm" .
+# 
+# http://ontology.group10travel.com#checkedBagWeightKg
+<http://ontology.group10travel.com#checkedBagWeightKg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#checkedBagWeightKg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#checkedBagWeightKg> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#BaggagePolicy> .
+<http://ontology.group10travel.com#checkedBagWeightKg> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://ontology.group10travel.com#checkedBagWeightKg> <http://www.w3.org/2000/01/rdf-schema#label> "checked bags kg" .
+# 
+# http://ontology.group10travel.com#checkedBagsNo
+<http://ontology.group10travel.com#checkedBagsNo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#checkedBagsNo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#checkedBagsNo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#BaggagePolicy> .
+<http://ontology.group10travel.com#checkedBagsNo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://ontology.group10travel.com#checkedBagsNo> <http://www.w3.org/2000/01/rdf-schema#label> "checked bags" .
+# 
+# http://ontology.group10travel.com#chosenMealServicePrice
+<http://ontology.group10travel.com#chosenMealServicePrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#chosenMealServicePrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#chosenMealServicePrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#Ticket> .
+<http://ontology.group10travel.com#chosenMealServicePrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://ontology.group10travel.com#chosenMealServicePrice> <http://www.w3.org/2000/01/rdf-schema#label> "chosen meal price" .
+# 
+# http://ontology.group10travel.com#chosenWifiServicePrice
+<http://ontology.group10travel.com#chosenWifiServicePrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#chosenWifiServicePrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#chosenWifiServicePrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#Ticket> .
+<http://ontology.group10travel.com#chosenWifiServicePrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://ontology.group10travel.com#chosenWifiServicePrice> <http://www.w3.org/2000/01/rdf-schema#label> "chosen wifi price" .
+# 
+# http://ontology.group10travel.com#dateOfBirth
+<http://ontology.group10travel.com#dateOfBirth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#dateOfBirth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#dateOfBirth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://ontology.group10travel.com#description
+<http://ontology.group10travel.com#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://ontology.group10travel.com#durationFrom
+<http://ontology.group10travel.com#durationFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#durationFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#durationFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://ontology.group10travel.com#durationFrom> <http://www.w3.org/2000/01/rdf-schema#label> "duration from" .
+# 
+# http://ontology.group10travel.com#durationMin
+<http://ontology.group10travel.com#durationMin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#durationMin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#durationMin> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://ontology.group10travel.com#durationMin> <http://www.w3.org/2000/01/rdf-schema#label> "duration min" .
+# 
+# http://ontology.group10travel.com#durationTo
+<http://ontology.group10travel.com#durationTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#durationTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#durationTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://ontology.group10travel.com#durationTo> <http://www.w3.org/2000/01/rdf-schema#label> "duration to" .
+# 
+# http://ontology.group10travel.com#email
+<http://ontology.group10travel.com#email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#email> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://ontology.group10travel.com#excessivePricePerKg
+<http://ontology.group10travel.com#excessivePricePerKg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#excessivePricePerKg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#excessivePricePerKg> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#BaggagePolicy> .
+<http://ontology.group10travel.com#excessivePricePerKg> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://ontology.group10travel.com#excessivePricePerKg> <http://www.w3.org/2000/01/rdf-schema#label> "excessive price per kg" .
+# 
+# http://ontology.group10travel.com#firstName
+<http://ontology.group10travel.com#firstName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#firstName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#firstName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontology.group10travel.com#firstName> <http://www.w3.org/2000/01/rdf-schema#label> "first name" .
+# 
+# http://ontology.group10travel.com#flightArrivalDateTime
+<http://ontology.group10travel.com#flightArrivalDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#flightArrivalDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#flightArrivalDateTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#Flight> .
+<http://ontology.group10travel.com#flightArrivalDateTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://ontology.group10travel.com#flightArrivalDateTime> <http://www.w3.org/2000/01/rdf-schema#label> "arrival date time" .
+# 
+# http://ontology.group10travel.com#flightDepartureDateTime
+<http://ontology.group10travel.com#flightDepartureDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#flightDepartureDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#flightDepartureDateTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#Flight> .
+<http://ontology.group10travel.com#flightDepartureDateTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://ontology.group10travel.com#flightDepartureDateTime> <http://www.w3.org/2000/01/rdf-schema#label> "departure date time" .
+# 
+# http://ontology.group10travel.com#flightDistanceKm
+<http://ontology.group10travel.com#flightDistanceKm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#flightDistanceKm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#flightDistanceKm> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#Flight> .
+<http://ontology.group10travel.com#flightDistanceKm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://ontology.group10travel.com#flightDistanceKm> <http://www.w3.org/2000/01/rdf-schema#label> "traveled distance" .
+# 
+# http://ontology.group10travel.com#flightNumber
+<http://ontology.group10travel.com#flightNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#flightNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#flightNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#Flight> .
+<http://ontology.group10travel.com#flightNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontology.group10travel.com#flightNumber> <http://www.w3.org/2000/01/rdf-schema#label> "flight Number" .
+# 
+# http://ontology.group10travel.com#flightType
+<http://ontology.group10travel.com#flightType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#flightType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#flightType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#Flight> .
+<http://ontology.group10travel.com#flightType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://ontology.group10travel.com#iataCode
+<http://ontology.group10travel.com#iataCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#iataCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#iataCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontology.group10travel.com#iataCode> <http://www.w3.org/2000/01/rdf-schema#label> "IATA code" .
+# 
+# http://ontology.group10travel.com#icaoCode
+<http://ontology.group10travel.com#icaoCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#icaoCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#icaoCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontology.group10travel.com#icaoCode> <http://www.w3.org/2000/01/rdf-schema#label> "ICAO code" .
+# 
+# http://ontology.group10travel.com#isAvailable
+<http://ontology.group10travel.com#isAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#isAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#isAvailable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://ontology.group10travel.com#isoCode
+<http://ontology.group10travel.com#isoCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#isoCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#isoCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://ontology.group10travel.com#lastName
+<http://ontology.group10travel.com#lastName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#lastName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#lastName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontology.group10travel.com#lastName> <http://www.w3.org/2000/01/rdf-schema#label> "last name" .
+# 
+# http://ontology.group10travel.com#passportNumber
+<http://ontology.group10travel.com#passportNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#passportNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#passportNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://ontology.group10travel.com#policyDueDate
+<http://ontology.group10travel.com#policyDueDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#policyDueDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#policyDueDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#CancellationPolicy> .
+<http://ontology.group10travel.com#policyDueDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontology.group10travel.com#policyDueDate> <http://www.w3.org/2000/01/rdf-schema#label> "policy due" .
+# 
+# http://ontology.group10travel.com#policyFlightType
+<http://ontology.group10travel.com#policyFlightType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#policyFlightType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#policyFlightType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#BaggagePolicy> .
+<http://ontology.group10travel.com#policyFlightType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontology.group10travel.com#policyFlightType> <http://www.w3.org/2000/01/rdf-schema#label> "flight type" .
+# 
+# http://ontology.group10travel.com#postalCode
+<http://ontology.group10travel.com#postalCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#postalCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#postalCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://ontology.group10travel.com#price
+<http://ontology.group10travel.com#price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#price> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# http://ontology.group10travel.com#refundPostDuePercentage
+<http://ontology.group10travel.com#refundPostDuePercentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#refundPostDuePercentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#refundPostDuePercentage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#CancellationPolicy> .
+<http://ontology.group10travel.com#refundPostDuePercentage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://ontology.group10travel.com#refundPostDuePercentage> <http://www.w3.org/2000/01/rdf-schema#label> "refund percentage post" .
+# 
+# http://ontology.group10travel.com#refundPreDuePercentage
+<http://ontology.group10travel.com#refundPreDuePercentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#refundPreDuePercentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#refundPreDuePercentage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#CancellationPolicy> .
+<http://ontology.group10travel.com#refundPreDuePercentage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://ontology.group10travel.com#refundPreDuePercentage> <http://www.w3.org/2000/01/rdf-schema#label> "refund percentage pre" .
+# 
+# http://ontology.group10travel.com#requestedExessiveBaggaeKG
+<http://ontology.group10travel.com#requestedExessiveBaggaeKG> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#requestedExessiveBaggaeKG> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#requestedExessiveBaggaeKG> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#Ticket> .
+<http://ontology.group10travel.com#requestedExessiveBaggaeKG> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://ontology.group10travel.com#requestedExessiveBaggaeKG> <http://www.w3.org/2000/01/rdf-schema#label> "requested excessive kg" .
+# 
+# http://ontology.group10travel.com#seatNumberr
+<http://ontology.group10travel.com#seatNumberr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#seatNumberr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#seatNumberr> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://ontology.group10travel.com#specialMealType
+<http://ontology.group10travel.com#specialMealType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#specialMealType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#specialMealType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#SpecialmealService> .
+<http://ontology.group10travel.com#specialMealType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontology.group10travel.com#specialMealType> <http://www.w3.org/2000/01/rdf-schema#label> "meal type" .
+# 
+# http://ontology.group10travel.com#title
+<http://ontology.group10travel.com#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://ontology.group10travel.com#tripTax
+<http://ontology.group10travel.com#tripTax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#tripTax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#tripTax> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#Trip> .
+<http://ontology.group10travel.com#tripTax> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# http://ontology.group10travel.com#wifiOnBoardBandWidthMbps
+<http://ontology.group10travel.com#wifiOnBoardBandWidthMbps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontology.group10travel.com#wifiOnBoardBandWidthMbps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://ontology.group10travel.com#wifiOnBoardBandWidthMbps> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.group10travel.com#WifionBoardService> .
+<http://ontology.group10travel.com#wifiOnBoardBandWidthMbps> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://ontology.group10travel.com#wifiOnBoardBandWidthMbps> <http://www.w3.org/2000/01/rdf-schema#label> "wifi width mbps" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://dbpedia.org/ontology/City
+<http://dbpedia.org/ontology/City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://ontology.group10travel.com#AirlineService
+<http://ontology.group10travel.com#AirlineService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://ontology.group10travel.com#BaggagePolicy
+<http://ontology.group10travel.com#BaggagePolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://ontology.group10travel.com#BusinessClass
+<http://ontology.group10travel.com#BusinessClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.group10travel.com#BusinessClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.group10travel.com#CabinClass> .
+<http://ontology.group10travel.com#BusinessClass> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.group10travel.com#EconomyClass> .
+<http://ontology.group10travel.com#BusinessClass> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.group10travel.com#FirstClass> .
+# 
+# http://ontology.group10travel.com#CabinClass
+<http://ontology.group10travel.com#CabinClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://ontology.group10travel.com#CancellationPolicy
+<http://ontology.group10travel.com#CancellationPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://ontology.group10travel.com#DirectFlight
+<http://ontology.group10travel.com#DirectFlight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.group10travel.com#DirectFlight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.group10travel.com#Flight> .
+<http://ontology.group10travel.com#DirectFlight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://ontology.group10travel.com#arrivesIn> .
+_:genid1 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onClass> <http://schema.org/Airport> .
+<http://ontology.group10travel.com#DirectFlight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://ontology.group10travel.com#departsFrom> .
+_:genid2 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onClass> <http://schema.org/Airport> .
+<http://ontology.group10travel.com#DirectFlight> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.group10travel.com#NonDirectFlight> .
+# 
+# http://ontology.group10travel.com#EconomyClass
+<http://ontology.group10travel.com#EconomyClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.group10travel.com#EconomyClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.group10travel.com#CabinClass> .
+<http://ontology.group10travel.com#EconomyClass> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.group10travel.com#FirstClass> .
+# 
+# http://ontology.group10travel.com#Entity
+<http://ontology.group10travel.com#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://ontology.group10travel.com#FirstClass
+<http://ontology.group10travel.com#FirstClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.group10travel.com#FirstClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.group10travel.com#CabinClass> .
+# 
+# http://ontology.group10travel.com#FlexibleCancellation
+<http://ontology.group10travel.com#FlexibleCancellation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.group10travel.com#FlexibleCancellation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.group10travel.com#CancellationPolicy> .
+<http://ontology.group10travel.com#FlexibleCancellation> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.group10travel.com#StrictCancellation> .
+# 
+# http://ontology.group10travel.com#Flight
+<http://ontology.group10travel.com#Flight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.group10travel.com#Flight> <http://www.w3.org/2002/07/owl#hasKey> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ontology.group10travel.com#flightDepartureDateTime> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://ontology.group10travel.com#Flight> <http://www.w3.org/2002/07/owl#hasKey> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://ontology.group10travel.com#flightNumber> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# http://ontology.group10travel.com#FlightPackage
+<http://ontology.group10travel.com#FlightPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://ontology.group10travel.com#MultiCityTrip
+<http://ontology.group10travel.com#MultiCityTrip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.group10travel.com#MultiCityTrip> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.group10travel.com#Trip> .
+<http://ontology.group10travel.com#MultiCityTrip> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.group10travel.com#OneWayTrip> .
+<http://ontology.group10travel.com#MultiCityTrip> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.group10travel.com#RoundTrip> .
+# 
+# http://ontology.group10travel.com#NonDirectFlight
+<http://ontology.group10travel.com#NonDirectFlight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.group10travel.com#NonDirectFlight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.group10travel.com#Flight> .
+<http://ontology.group10travel.com#NonDirectFlight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://ontology.group10travel.com#includeSubFlight> .
+_:genid5 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onClass> <http://ontology.group10travel.com#DirectFlight> .
+<http://ontology.group10travel.com#NonDirectFlight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://ontology.group10travel.com#includesStopping> .
+_:genid6 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onClass> <http://ontology.group10travel.com#Stopping> .
+# 
+# http://ontology.group10travel.com#OneWayTrip
+<http://ontology.group10travel.com#OneWayTrip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.group10travel.com#OneWayTrip> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.group10travel.com#Trip> .
+<http://ontology.group10travel.com#OneWayTrip> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.group10travel.com#RoundTrip> .
+# 
+# http://ontology.group10travel.com#RoundTrip
+<http://ontology.group10travel.com#RoundTrip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.group10travel.com#RoundTrip> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.group10travel.com#Trip> .
+# 
+# http://ontology.group10travel.com#SeatSelectionService
+<http://ontology.group10travel.com#SeatSelectionService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.group10travel.com#SeatSelectionService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.group10travel.com#AirlineService> .
+<http://ontology.group10travel.com#SeatSelectionService> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.group10travel.com#SpecialmealService> .
+<http://ontology.group10travel.com#SeatSelectionService> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.group10travel.com#WifionBoardService> .
+# 
+# http://ontology.group10travel.com#SpecialmealService
+<http://ontology.group10travel.com#SpecialmealService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.group10travel.com#SpecialmealService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.group10travel.com#AirlineService> .
+<http://ontology.group10travel.com#SpecialmealService> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.group10travel.com#WifionBoardService> .
+# 
+# http://ontology.group10travel.com#Stopping
+<http://ontology.group10travel.com#Stopping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.group10travel.com#Stopping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://ontology.group10travel.com#stopsAt> .
+_:genid7 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onClass> <http://schema.org/Airport> .
+# 
+# http://ontology.group10travel.com#StrictCancellation
+<http://ontology.group10travel.com#StrictCancellation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.group10travel.com#StrictCancellation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.group10travel.com#CancellationPolicy> .
+# 
+# http://ontology.group10travel.com#Ticket
+<http://ontology.group10travel.com#Ticket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://ontology.group10travel.com#Trip
+<http://ontology.group10travel.com#Trip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.group10travel.com#Trip> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://ontology.group10travel.com#bookingId> .
+_:genid8 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#long> .
+# 
+# http://ontology.group10travel.com#User
+<http://ontology.group10travel.com#User> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.group10travel.com#User> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.group10travel.com#Entity> .
+# 
+# http://ontology.group10travel.com#WifionBoardService
+<http://ontology.group10travel.com#WifionBoardService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontology.group10travel.com#WifionBoardService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.group10travel.com#AirlineService> .
+# 
+# http://schema.org/Airline
+<http://schema.org/Airline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/Airline> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.group10travel.com#Entity> .
+<http://schema.org/Airline> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://ontology.group10travel.com#hasCabinClass> .
+_:genid9 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onClass> <http://ontology.group10travel.com#CabinClass> .
+<http://schema.org/Airline> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://ontology.group10travel.com#introduceBaggagePolicy> .
+_:genid10 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onClass> <http://ontology.group10travel.com#BaggagePolicy> .
+<http://schema.org/Airline> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://ontology.group10travel.com#introduceCancellationPolicy> .
+_:genid11 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onClass> <http://ontology.group10travel.com#CancellationPolicy> .
+# 
+# http://schema.org/Airport
+<http://schema.org/Airport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/Airport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.group10travel.com#Entity> .
+# 
+# http://schema.org/ContactPoint
+<http://schema.org/ContactPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
