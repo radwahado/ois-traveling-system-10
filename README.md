@@ -46,6 +46,7 @@ Steps to setup our applicaiton goes as follow:
 ```
 ### copy jetty_webapp folder contents to jetty webapps directory
 ### add the following to xammp\apache\conf\extra\ httpd-vhosts.conf
+>> change D:/Programs/xammpp/ according to your pc
 ```
 <VirtualHost *:80>
 	ServerName ontology.group10travel.com
